@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Page title</title>
+    <style>
+        *{
+    margin:0;
+    padding:0;
+}
+.header{
+    height:40rem;
+    width:65rem;
+    background-color:#B24BF3;
+    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content{
+    height:600px;
+    width: 350px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    
+}
+#circle{
+    height:220px;
+    width:250px;
+    border-radius:100%;
+    background-color: gray;
+}
+    
+
+button{
+    height:70px;
+    width:70px;
+   }
+    </style>
+<body>
+    <div class="header">
+      <div class="content">
+        <div id="circle"></div>
+      </div>
+
+      <button class="On" onclick="onfun()">On</button>
+      <button class="Off"onclick="offfun()">Off</button>
+    </div>
+    <script>
+      let circle = document.getElementById("circle");
+      let on = document.getElementsByClassName("On");
+      let Off = document.getElementsByClassName("Off");
+      console.log('>>>>>>>>>>>',circle)
+
+      const onfun=()=>{
+        console.log('>>>>>>>>>>>', "on clicked")
+        circle.style.background = "yellow"; 
+      }
+      const offfun=()=>{
+        console.log('>>>>>>>>>>>', "off clicked")
+        circle.style.background = "gray"; 
+      }
+    </script>
+  </body>
+</html>
