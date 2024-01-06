@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <h2>Changing the Background Color when we click on button</h2> -->
+    <div class="container">
+     <button id="btn">Click Me</button>
+    </div>  
+
+    <script>
+         let btn = document.getElementById("btn")
+         let red , blue ,green
+         
+          
+            const randomColorGen = () =>{
+                 red = Math.random()*255
+                 green = Math.random()*255
+                 blue = Math.random()*255
+                 document.body.style.backgroundColor = `rgb(${red} , ${green} ,${blue})`
+            }
+
+              btn.addEventListener("click",randomColorGen);
+
+            // set interval is a loop which is asyncrinize and run after given time
+            //setIntervalId  = setInterval(randomColorGen,2000) 
+           // console.log(setIntervalId) 
+            
+    </script>
+</body>
+</html>
