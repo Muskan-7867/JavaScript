@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Greetings</title>
+</head>
+<body>
+    <h1 id="greetings"></h1>
+    <script>
+        function doGreeting (personName ='Dear'){
+        let date = new Date();
+        let hours = date.getHours();
+      
+        let heading = document.querySelector("#greetings");
+      
+        if (hours < 12) {
+            heading.innerText = `Good Morning ${personName}`;
+        } else if (hours < 16) {
+            heading.innerText = `Good Afternoon ${personName}`;
+        } 
+         else {
+            heading.innerText = `Good Night ${personName}`;
+        }
+    }
+    doGreeting('Muskan')
+    </script>
+</body>
+</html>
