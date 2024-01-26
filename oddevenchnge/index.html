@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn-container{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #my-button{
+            height: 40px;
+            width: 50px;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .js-odd{
+            background-color: green;
+        }
+        .js-even{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+       <button id="my-button" onclick="buttonPressed()">0</button>
+    </div>
+
+    <script>
+let noOfTimesClicked =0;
+function buttonPressed(){
+    
+    noOfTimesClicked++;
+    updateButton();
+
+}
+
+function updateButton(){
+    let button =document.querySelector('#my-button')
+    if (noOfTimesClicked  % 2 === 0){
+     button.classList.remove("js-odd");
+     button.classList.add("js-even");
+    }else{
+        button.classList.remove("js-even");
+        button.classList.add("js-odd");
+    }
+    button.innerText = noOfTimesClicked;
+}
+updateButton();
+    </script>
+  
+</body>
+</html>
+
